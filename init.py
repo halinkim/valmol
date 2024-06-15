@@ -63,6 +63,7 @@ preHTML = r"""
             <button class="catbtn" data-filter="icebox">아이스박스</button>
             <button class="catbtn" data-filter="ascent">어센트</button>
             <button class="catbtn" data-filter="abyss">어비스</button>
+            <button class="catbtn" data-filter="haven"> 헤이븐</button>
         </div>
 
         <h3> 요원 </h3>
