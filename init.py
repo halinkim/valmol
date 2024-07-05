@@ -8,10 +8,11 @@ png_files = [f for f in os.listdir(img_dir) if f.endswith(".png")]
 
 mollys = dict()
 
-RESIZE = False
+RESIZE = True
+ONLY_NEW = True
 
 for f in png_files:
-    if RESIZE:
+    if RESIZE and (not (ONLY_NEW and os.path.exists(resize_dir + f))):
         img = Image.open(img_dir + f)
         img_resized = img.resize((1920, 1080), Image.LANCZOS).convert("RGB")
         img_resized.save(resize_dir + f, "JPEG",optimize=True, quality=90)
